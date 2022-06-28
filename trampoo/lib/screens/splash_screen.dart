@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   //     Navigator.pushReplacement(
   //       context,
   //       MaterialPageRoute(
-  //         builder: (context) => RegisterScreem(),
+  //         builder: (context) => RegisterScreen(),
   //       ),
   //     );
   //   });
@@ -27,6 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Container(
         color: Theme.of(context).colorScheme.primary,

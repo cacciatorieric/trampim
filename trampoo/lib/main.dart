@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trampoo/screens/register_screen.dart';
 import 'package:trampoo/screens/splash_screen.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           secondary: Color.fromRGBO(255, 1, 68, 1.0),
         ),
       ),
-      home: const SplashScreen(),
+      home: RegisterScreen(),
     );
   }
 }
