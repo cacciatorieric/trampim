@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class FragmentOne extends StatelessWidget {
@@ -5,20 +7,44 @@ class FragmentOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.deepOrange,
-      width: double.infinity,
-      height: double.infinity,
-      child: const Center(
-        child: Text(
-          'Eric',
-          style: TextStyle(
-            color: Color.fromARGB(255, 0, 234, 255),
-            fontSize: 35,
-            fontFamily: 'Microma',
+    return Stack(
+      fit: StackFit.expand,
+      children: [
+        Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/business.jpg'),
+              fit: BoxFit.cover,
+            ),
           ),
         ),
-      ),
+        BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 35, sigmaY: 35),
+          child: Container(
+            color: const Color.fromRGBO(35, 35, 56, 0.8),
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(
+                    'Olá!\n Estamos muito felizes por você ter escolhido o TRAMPO!',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 32,
+                      fontFamily: 'Fredoka',
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

@@ -17,11 +17,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: const ColorScheme.dark(
-          primary: Color.fromRGBO(35, 35, 56, 1.0),
-          secondary: Color.fromRGBO(255, 1, 68, 1.0),
+          primary: Color.fromARGB(255, 35, 35, 68),
+          secondary: Color.fromRGBO(255, 1, 61, 1.0),
+          tertiary: Colors.white,
         ),
       ),
-      home: RegisterScreen(),
+      home: SplashScreen(),
     );
   }
 }

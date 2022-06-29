@@ -62,7 +62,12 @@ flutter:
   
   assets:
      - 'assets/animations/anim_splash.json'
-  
+     - 'assets/images/teste.jpg'
+     - 'assets/images/business.jpg'
+     - 'assets/images/logo.png'
+
+
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -82,6 +87,12 @@ flutter:
      - family: Microma
        fonts:
          - asset:  'assets/fonts/microma.ttf'
+     - family: Fredoka
+       fonts:
+         - asset:  'assets/fonts/fredoka.ttf'
+
+
+
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

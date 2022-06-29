@@ -11,18 +11,18 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  // @override
-  // void initState() {
-  //   Timer(Duration(seconds: 8), () {
-  //     Navigator.pushReplacement(
-  //       context,
-  //       MaterialPageRoute(
-  //         builder: (context) => RegisterScreen(),
-  //       ),
-  //     );
-  //   });
-  //   super.initState();
-  // }
+  @override
+  void initState() {
+    Timer(const Duration(seconds: 5), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => RegisterScreen(),
+        ),
+      );
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,10 +47,10 @@ class _SplashScreenState extends State<SplashScreen> {
             Positioned(
               top: size.height * 0.6,
               child: Text(
-                'Precisou, Trampou!',
+                'Precisou? Trampou!',
                 style: TextStyle(
                   color: Theme.of(context).colorScheme.secondary,
-                  fontSize: 24,
+                  fontSize: 18,
                   fontFamily: 'Microma',
                 ),
               ),

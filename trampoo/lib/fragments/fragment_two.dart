@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class FragmentTwo extends StatelessWidget {
@@ -5,20 +7,38 @@ class FragmentTwo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.purple,
-      width: double.infinity,
-      height: double.infinity,
-      child: const Center(
-        child: Text(
-          'Cacciatori',
-          style: TextStyle(
-            color: Color.fromARGB(255, 0, 240, 24),
-            fontSize: 35,
-            fontFamily: 'Microma',
+    return Stack(
+      fit: StackFit.expand,
+      children: [
+        Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/business.jpg'),
+              fit: BoxFit.cover,
+            ),
           ),
         ),
-      ),
+        BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 35, sigmaY: 35),
+          child: Container(
+            color: const Color.fromRGBO(255, 1, 61, 0.6),
+            alignment: Alignment.center,
+            child: Center(
+              child: Text(
+                'Antes de começar a Trampar, precisamos coletar algumas informações primeiro',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.tertiary,
+                  fontSize: 32,
+                  fontFamily: 'Fredoka',
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
