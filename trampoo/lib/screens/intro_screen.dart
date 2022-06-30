@@ -5,8 +5,8 @@ import 'package:trampoo/fragments/fragment_three.dart';
 import 'package:trampoo/fragments/fragment_two.dart';
 import 'package:trampoo/fragments/fragmente_one.dart';
 
-class RegisterScreen extends StatelessWidget {
-  RegisterScreen({Key? key}) : super(key: key);
+class IntroScreen extends StatelessWidget {
+  IntroScreen({Key? key}) : super(key: key);
 
   final List<Widget> pages = [
     const FragmentLogo(),

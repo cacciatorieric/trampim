@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trampoo/screens/register_screen.dart';
+import 'package:trampoo/screens/intro_screen.dart';
+import 'package:trampoo/screens/login_screen.dart';
 import 'package:trampoo/screens/splash_screen.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           tertiary: Colors.white,
         ),
       ),
-      home: SplashScreen(),
+      home: LoginScreen(),
     );
   }
 }

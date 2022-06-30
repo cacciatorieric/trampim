@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:trampoo/screens/register_screen.dart';
+import 'package:trampoo/screens/intro_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -11,18 +11,21 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    Timer(const Duration(seconds: 5), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => RegisterScreen(),
-        ),
-      );
-    });
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   Timer(
+  //     const Duration(seconds: 5),
+  //     () {
+  //       Navigator.pushReplacement(
+  //         context,
+  //         MaterialPageRoute(
+  //           builder: (context) => IntroScreen(),
+  //         ),
+  //       );
+  //     },
+  //   );
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             Positioned(
-              top: size.height * 0.6,
+              bottom: 200,
               child: Text(
                 'Precisou? Trampou!',
                 style: TextStyle(
@@ -56,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             Positioned(
-              top: size.height * 0.68,
+              bottom: 180,
               left: 50,
               child: Container(
                 height: 3,
@@ -65,7 +68,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             Positioned(
-              top: size.height * 0.72,
+              bottom: 160,
               right: 50,
               child: Container(
                 height: 3,
